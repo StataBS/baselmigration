@@ -575,7 +575,8 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
 
     span.append('label')
       .attr('for', function(d) { return 'year-' + d; })
-      .text(function(d) { return ""+d+"–" + (d+5); });
+      //.text(function(d) { return ""+d+"–" + (d+5); });
+	  .text(function(d) { return ""+d; });
 
     // keyboard control
     d3.select(document.body).on('keypress', function() {
@@ -640,6 +641,11 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
 
     config.maxRegionsOpen = config.maxRegionsOpen || 2;
     config.infoPopupDelay = config.infoPopupDelay || 300;
+
+    //jb start
+    config.InFlowLabel = config.InFlowLabel || 'Zuzüge';
+    config.OutFlowLabel = config.OutFlowLabel || 'Wegzüge';
+    //jb end
 
 
     var colors = d3.scale.category10().domain(data.regions);
@@ -775,7 +781,7 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
       .append('g')
         .attr('class', 'info')
         .attr('opacity', 0);
-    
+
     info.append('rect')
       .style('filter', 'url(#dropshadow)');
     info.append('g').attr('class', 'text');
@@ -817,8 +823,14 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         var text = info.select('.text').selectAll('text')
           .data([
             data.names[d.id],
-            'Total In: ' + formatNumber(d.inflow),
-            'Total Out: ' + formatNumber(d.outflow)
+            /* jb commented out
+            'Total Zuzüge: ' + formatNumber(d.inflow),
+            'Total Wegzüge: ' + formatNumber(d.outflow)
+            */
+            //jb start
+            'Total ' + config.InFlowLabel + ': ' + formatNumber(d.inflow),
+            'Total ' + config.OutFlowLabel + ': ' + formatNumber(d.outflow)
+            //jb end
           ]);
         text.enter().append('text');
         text
@@ -924,7 +936,7 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
     }
 
     // Transition countries to region:
-    // Use first country's start angle and last countries end angle. 
+    // Use first country's start angle and last countries end angle.
     function meltPreviousGroupArc(d) {
       if (d.id !== d.region) {
         return;
@@ -952,7 +964,7 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
       if (d.source.id !== d.source.region) {
         return;
       }
-      
+
       var c = {
         source: {},
         target: {}
@@ -970,7 +982,7 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
               c.source.endAngle = chord.source.endAngle;
             }
           }
-          
+
           if (chord.target.region === d.target.id) {
             if (!c.target.startAngle || chord.target.startAngle < c.target.startAngle) {
               c.target.startAngle = chord.target.startAngle;
@@ -981,7 +993,7 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
           }
         });
       });
-      
+
       c.source.startAngle = c.source.startAngle || 0;
       c.source.endAngle = c.source.endAngle || aLittleBit;
       c.target.startAngle = c.target.startAngle || 0;
@@ -1022,7 +1034,7 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
           });
         });
       group.exit().remove();
-      
+
       // group arc
       var groupPath = group.selectAll('.group-arc')
         .data(function(d) { return [d]; });
@@ -1063,7 +1075,7 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
           draw(year, countries);
         });
 
-      
+
       // text label group
       var groupTextGroup = element.selectAll('.label')
         .data(layout.groups, function(d) { return d.id; });
@@ -1114,10 +1126,10 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         .classed('region', function(d) {
           return d.id === d.region;
         })
-        .text(function(d) { 
+        .text(function(d) {
           if (d.id !== d.region) {
             return data.names[d.id];
-          } 
+          }
         })
         .attr('transform', function(d) {
           if (d.id !== d.region) {
@@ -1154,11 +1166,11 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
           var i = d3.interpolate(previous.groups[d.id] || previous.groups[d.region] || meltPreviousGroupArc(d) || config.initialAngle.arc, d);
           if (d.angle > Math.PI/2 && d.angle < Math.PI*3/2) {
             return function (t) {
-              return textPathArc2(i(t)); 
+              return textPathArc2(i(t));
             };
           } else {
             return function (t) {
-              return textPathArc(i(t)); 
+              return textPathArc(i(t));
             };
           }
         });
@@ -1173,7 +1185,14 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         .enter()
         .append("textPath")
       groupTextPath
-        .text(function(d) { return data.names[d.id]; })
+        .text(function(d) {
+		// jb start inset
+		//return data.names[d.id];  //JB Here's the function that returns the region label
+			var name = data.names[d.id];
+			var pos = name.indexOf("- ");
+			return pos > 0 ? name.slice(0, pos) : name;
+		// jb end inset
+		})
         .attr('startOffset', function(d) {
           if (d.angle > Math.PI/2 && d.angle < Math.PI*3/2) {
             return '75%';
@@ -1183,13 +1202,13 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
         })
         .attr("xlink:href", function(d, i, k) { return "#group-textpath-arc" + d.id; });
 
-
+	/* jb removed
       groupTextPath
         .filter(function(d, i) {
           return this.getComputedTextLength() > (d.endAngle - d.startAngle) * (config.outerRadius + 18);
         })
         .remove();
-
+	*/
 
 
       // chords

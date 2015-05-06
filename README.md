@@ -1,7 +1,4 @@
-# Global Migration Data Sheet 2013
-Unique estimates of migration flows between the top 50 sending and receiving countries.
-
-http://www.global-migration.info/
+# Basel Migration Data Sheet 
 
 ## Installation
 ```javascript
@@ -18,11 +15,6 @@ npm start
 Lint and compile the project:
 ```javascript
 grunt
-```
-
-For development you can compile a small excerpt using the `--sample` switch:
-```javascript
-grunt --sample
 ```
 
 ## Contributing

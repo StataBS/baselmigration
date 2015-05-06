@@ -2,296 +2,32 @@
 <html lang=en>
 <head>
   <meta charset=utf-8>
-	<title>Global international migration flows | Wittgenstein Centre</title>
-	<meta name=description content="Global Migration Data Sheet 2013: Unique estimates of migration flows between the top 50 sending and receiving countries.">
+	<title>Wanderungsanalyse Basel-Stadt</title>
+	<meta name=description content="Wanderungsanalyse Basel-Stadt">
 	<meta name=viewport content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.png" type="image/png">
 	<link href="dist/app-v1.css" rel="stylesheet" media="all">
-
-	<!--[if lt IE 9]><script src=javascripts/html5shiv-printshiv.js></script><![endif]-->
-  <script src="dist/app-v1.js"></script>
 </head>
 <body>
   <div id=container class="container">
 
-    <div class="social-wrap">
-      <div class="social">
-        <div class="fb-like" data-send="false" data-layout="button_count" data-width="90px" data-show-faces="false" data-font="lucida grande"></div>
-        <div id="plusone-div"></div>
-        <a href="https://twitter.com/share" class="twitter-share-button" data-text="The Global Flow of People"></a>
-        <div class="clear"></div>
-      </div>
-    </div>
 
   	<header role="banner">
-  		<h1>The global flow of people</h1>
-      <div class="badge">
-        <a href="http://www.sciencemag.org/cgi/content/abstract/343/6178/1520?ijkey=ypit4/xi7wo4M&keytype=ref&siteid=sci" target=_blank><img src="images/badge_published-in-science.png" alt="Published in Science / free access"></a>
-      </div>
+  		<h1>Wanderungsanalyse Basel-Stadt</h1>	
       <div class="lead-in">
-        Explore new estimates of migration flows between and within regions for five-year periods, 1990 to 2010. Click on a region to discover flows country-by-country.
+        Folgende interaktive Grafiken stehen für die Datenexploration zur Verfügung: 
+		<ul>
+			<li><a href="index_migr.html" target="_blank">Zu- und Abwanderungen der Bewohner von Basel-Stadt</a></li> 
+			<li><a href="index_umz.html"  target="_blank">Umzüge innerhalb des Kantons Basel-Stadt</a></li> 
+			<li><a href="index_umzSchweizer.html"  target="_blank">Umzüge der Schweizer innerhalb des Kantons  Basel-Stadt</a></li> 
+			<li><a href="index_umzAuslaender.html"  target="_blank">Umzüge der Ausländer innerhalb des Kantons  Basel-Stadt</a></li> 
+		</ul>
       </div>
       <div class="credits">
-        by <a href="http://www.oeaw.ac.at/vid/staff/staff_nikola_sander.shtml">Nikola Sander</a>, 
-        <a href="http://www.oeaw.ac.at/vid/staff/staff_guy_abel.shtml">Guy J. Abel</a> &amp; 
-        <a href="http://www.oeaw.ac.at/vid/staff/staff_ramon_bauer.shtml">Ramon Bauer</a> <br>
-        at the <a href="http://www.wittgensteincentre.org">Wittgenstein Centre for Demography and Global Human Capital</a>        
+		
       </div>
       <hr>
   	</header>
-  	
-  	<div class="wrap">
-  		<main role="main">
-        <nav role=navigation>
-          <div id="timeline"></div>
-        </nav>
-        <div id="diagram"></div>
-  		</main>
-  	</div>
-  	
 
-  	<footer role="contentinfo">
-
-      <hr>
-
-      <div class="column-wrap-3">
-
-        <div class="column">
-          <h3>Further reading</h3>
-          <p>
-            Abel &amp; Sander (2014).
-            <a href="http://www.sciencemag.org/cgi/content/abstract/343/6178/1520?ijkey=ypit4/xi7wo4M&keytype=ref&siteid=sci" target="_blank">Quantifying Global International Migration Flows</a>.
-            Science, 343 (6178).
-          </p>
-          <p>Abel (2013). <a href="http://www.demographic-research.org/volumes/vol28/18/28-18.pdf" target=_blank>Estimating global migration flow tables using place of birth data</a>. Demographic Research 28(18):505-546.</p>
-          <p>Sander et al. (2014). <a href="VID%20WP%20Visualising%20Migration%20Flow%20Data%20with%20Circular%20Plots.pdf">Visualising migration flow data with circular plots</a>. VID Working paper 02/14. Vienna Institute of Demography, Austria. (<a href="Supplementary%20Materials%20Sander%20et%20al%202014.zip">supp. materials</a>)</p>
-        </div>
-
-        <div class="column">
-          <h3>Contact</h3>
-          <p>
-            About the circular plots:<br>
-            <a href="mailto:nikola.sander@oeaw.ac.at">nikola.sander@oeaw.ac.at</a>
-          </p>
-          <p>
-            About the data:<br>
-            <a href="mailto:guy.abel@oeaw.ac.at">guy.abel@oeaw.ac.at</a>
-          </p>
-        </div>
-
-        <div class="column">
-          <h3>Credits</h3>
-          <p>
-            Provided by<br>
-            <a href="http://www.wittgensteincentre.org"><img src="images/wittgenstein.png"></a>
-            <a href="http://www.oeaw.ac.at/vid/"><img src="images/vid.png"></a>
-          </p>
-          <p>Coded by <a href="http://null2.net"><img src="images/null2.png"></a></p>
-          <p>Screendesign by <a href="http://elvirastein.com/">Elvira Stein</a></p>
-          <p>Inspired by Martin Krzywinski's <a href="http://circos.ca/">Circos</a> and Mike Bostock’s <a href="http://d3js.org/">D3.js library</a>.</p>
-        </div>
-
-        <div class="clear"></div>
-
-      </div>
-
-      <hr>
-
-      <div class="license">
-        Version <span class="version">1.0.19 (Febuary 2014)</span>. 
-        This work is licensed under a <a href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License.</a>
-        <a href="http://creativecommons.org/licenses/by-nc/3.0/"><img src="images/by-nc.png"></a>
-      </div>
-
-      <div class="column-wrap-2">        
-        <div class="column">
-          <div class="column-item">
-            <h2>About the Data</h2>
-            <p>
-              The bilateral flows between 196 countries are estimated from sequential stock tables. They are comparable across countries and capture the number of people who changed their country of residence over five-year periods. The estimates reflect migration transitions and thus cannot be compared to annual movements flow data published by United Nations and Eurostat.
-            </p>
-            <div class="center">
-              <!-- data/Flow%20Data%20for%20Online%20Viz%20Version2.csv -->
-              <a href="Data%20on%20the%20global%20flow%20of%20people_Version%20March2014.csv" class="button">
-                Download the data
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="column">
-          <div class="column-item">
-            <h2>About the plot</h2>
-            <p>
-              The circular plot shows the estimates of directional flows between 123 countries that recorded a migration volume (immigration + emigration) of more than 100,000 people in at least two of the four time periods. Only flows containing at least 50,000 migrants are shown. The window that pops up when hovering over the plot indicates the absolute number of immigrants (total in) and emigrants (total out) over the five-year period.
-            </p>
-            <div class="center">
-              <a href="http://github.com/null2/globalmigration" class="button">
-                Source Code on Github
-              </a>
-              <a href="http://www.oeaw.ac.at/vid/publications/p_vid-workingpapers.shtml" class="button">
-                Paper about the plot
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="clear"></div>
-
-        <hr>
-
-        <div class="column">
-          <div class="column-item">
-            <h2>Estimating global bilateral migration flows</h2>
-            <p>
-              As migration flow data are often incomplete and not comparable across nations, we estimate the number of movements by linking changes in migrant stock data over time. Using statistical missing data methods, we estimate the five-year migrant flows that are required to meet differences in migrant stock totals. For example, if the number of foreign-born in the United States increases between two time periods, we estimate the minimum migrant flows between the US and all other countries in the world that are required to meet this increase.
-            </p>
-            <p>
-              For each country of birth, we estimate the minimum number of migrant flows required to match differences in stocks by assuming that people are more likely to stay than to move. This estimation procedure is replicated simultaneously for all 196 countries to estimate birthplace specific flow tables, resulting in a comparable set of global migration flows. Alterations are made to the migrant stock counts to control for births and deaths during the period. This allows our country-specific net migration flows to closely match the net migration estimates published by the United Nations. 
-            </p>
-          </div>
-        </div>
-
-        <div class="column">
-          <div class="column-item">
-            <h2>Global Migration Data Sheet 2005–2010</h2>
-            <p>
-              This Data Sheet provides a comprehensive portrait of the global flow of people in 2005–10. It features the flows between the top 50 sending and receiving countries, each country’s total immigration and emigration flow and the world’s 20 largest country-to-country flows. <a href="mailto:nikola.sander@oeaw.ac.at">Email us to request a hard copy</a>.
-            </p>
-            <div class="center">
-              <a href="VID_Global_Migration_Datasheet_web.pdf" target=_blank class="button">
-                Download Data Sheet
-              </a>
-            </div>
-            <br>
-            <div class="center">
-              <a href="VID_Global_Migration_Datasheet_web.pdf" target=_blank>
-                <img src="images/poster.png">
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="clear"></div>
-
-      </div>
-
-      <br><br>
-
-  	</footer>
-
-    <div id=help-wrapper class=help-wrapper>
-      <div class="help" id="help">
-        <div class="tab">How to read the plot</div>
-        <div class="help-content">
-          <h3>How to read the plot</h3>
-          <img src="images/help.png" class="left">
-          <p>
-            Origins and destinations are represented by the circle’s segments. 
-            Each region/country is assigned a colour. 
-            Flows have the same colour as their origin and the width indicates their size. 
-            The direction of the flow is also shown by the gap between flow and country/region: small gap indicates origin; large gap indicates destination. 
-            <b>Click on a segment to switch between country and region view.</b>
-          </p>
-          <div class="clear"></div>
-          <p>
-            Switch between time periods using Ctrl and number keys (1,2,3,4); 
-            reset the plot using Ctrl and r; zoom in/out with Ctrl and +/- 
-          </p>
-
-        </div>
-        <div class="clear"></div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // help
-    (function() {
-      var help = d3.select('#help');
-
-      help.on('click', function() {
-        var isActive = help.classed('active');
-
-        help
-          .classed('active', !isActive)
-          .transition()
-          .style('width', isActive ? '30px' : '572px');
-      });
-
-      function helpOffset() {
-        var offset = Math.max((document.body.clientWidth - document.getElementById('container').clientWidth) / 2, 0);
-
-        help.style('right', offset + 'px');
-      }
-      d3.select(window).on('resize.help-resize', helpOffset);
-      helpOffset();
-    })();
-  </script>
-
-
-  <script>
-    (function() {
-
-      var datafile = 'json/migrations.json';
-      var aLittleBit = Math.PI / 100000;
-
-      d3.json(datafile, function(data) {
-        var now = 2005;
-        var chart = Globalmigration.chart(data, {
-          element: '#diagram',
-          now: now,
-          animationDuration: 500,
-          margin: 125,
-          arcPadding: 0.04,
-          layout: {
-            threshold: 50000,
-            labelThreshold: 5000,
-            colors: 'cd3d08 ec8f00 6dae29 683f92 b60275 2058a5 00a592 009d3c 378974 ffca00'.split(' ').map(function(c) { return '#' + c; })
-          }
-        });
-
-        Globalmigration.timeline(chart, {
-          now: now,
-          element: '#timeline'
-        });
-
-        chart.draw(now);
-      });
-    })();
-
-  </script>
-
-  <div id="fb-root"></div>
-
-  <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-    {"parsetags": "explicit"}
-  </script>
-
-  <script>
-    (function() {
-      function loadScript(d,s,l,id){
-        var js,
-        fjs=d.getElementsByTagName(s)[0],
-        p=/^http:/.test(d.location)?'http':'https';
-        if(!id || !d.getElementById(id)){
-          js=d.createElement(s);
-          js.id=id;
-          js.src=p+'://' + l;
-          fjs.parentNode.insertBefore(js,fjs);
-        }
-      }
-
-      loadScript(document, 'script', 'connect.facebook.net/en_US/all.js#xfbml=1', 'facebook-jssdk');
-      if (typeof gapi === 'object') {
-        gapi.plusone.render("plusone-div", {size: 'medium', annotation: 'bubble', width: '250px'});
-      }
-      loadScript(document, 'script', 'platform.twitter.com/widgets.js', 'twitter-wjs');
-    })();
-  </script>
-
-	<script>
-		var _gaq=[['_setAccount','UA-42659946-1'],['_trackPageview']];(function(a,b){var c=a.createElement(b),d=a.getElementsByTagName(b)[0];c.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";d.parentNode.insertBefore(c,d)})(document,"script");
-	</script>
 </body>
 </html>

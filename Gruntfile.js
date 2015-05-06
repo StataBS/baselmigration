@@ -31,6 +31,41 @@ module.exports = function(grunt) {
         dest: 'json/migrations.json'
       }
     },
+	
+    filterStatAUmz: {
+      main: {
+        options: {
+          countries: 'data/StatACountriesUmz.csv'
+        },
+        src: 'data/StatAFlowDataUmz.csv',
+        dest: 'tmp/dataStatA_Umz.csv'
+      }
+    },
+    compileStatAUmz: {
+      main: {
+        src: 'tmp/dataStatA_Umz.csv',
+        dest: 'json/migrationsStatA_Umz.json'
+      }
+    },
+
+    filterStatAMigr: {
+      main: {
+        options: {
+          countries: 'data/StatACountriesMigr.csv'
+        },
+        src: 'data/StatAFlowDataMigr.csv',
+        dest: 'tmp/dataStatA_Migr.csv'
+      }
+    },
+    compileStatAMigr: {
+      main: {
+        src: 'tmp/dataStatA_Migr.csv',
+        dest: 'json/migrationsStatA_Migr.json'
+      }
+    },
+	
+	
+	
     concat: {
       js: {
         options: {
@@ -98,4 +133,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', ['concat', 'cssmin', 'uglify', 'copy']);
   grunt.registerTask('default', ['jshint', 'nodeunit', 'filter', 'compile', 'build']);
+  grunt.registerTask('StatAUmz', ['jshint', 'nodeunit', 'filterStatAUmz', 'compileStatAUmz', 'build']);
+  grunt.registerTask('StatAMigr', ['jshint', 'nodeunit', 'filterStatAMigr', 'compileStatAMigr', 'build']);
 };
