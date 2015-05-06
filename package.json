@@ -1,23 +1,23 @@
 {
-  "name": "globalmigration",
-  "description": "Global Migration Data Sheet 2013",
+  "name": "baselmigration",
+  "description": "Basel-Satdt Migration Data Sheet",
   "version": "1.0.18",
-  "homepage": "https://github.com/null2/globalmigration",
+  "homepage": "https://github.com/jb3-2/baselmigration",
   "author": {
     "name": "null2 GmbH Berlin",
     "email": "info@null2.net"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/null2/globalmigration.git"
+    "url": "git://github.com/jb3-2/baselmigration.git"
   },
   "bugs": {
-    "url": "https://github.com/null2/globalmigration/issues"
+    "url": "https://github.com/jb3-2/baselmigration/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/null2/globalmigration/blob/master/LICENSE-MIT"
+      "url": "https://github.com/jb3-2/baselmigration/blob/master/LICENSE-MIT"
     }
   ],
   "engines": {
