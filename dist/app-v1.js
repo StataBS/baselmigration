@@ -643,8 +643,8 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
     config.infoPopupDelay = config.infoPopupDelay || 300;
 
     //jb start
-    config.InFlowLabel = config.InFlowLabel || 'Zuzüge';
-    config.OutFlowLabel = config.OutFlowLabel || 'Wegzüge';
+    config.InFlowLabel = config.InFlowLabel || 'In';
+    config.OutFlowLabel = config.OutFlowLabel || 'Out';
     //jb end
 
 
