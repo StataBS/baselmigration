@@ -78,9 +78,8 @@ a:hover {
 
 .container {
   margin: 0 auto;
-  //commented out by jb
-  //min-width: 580px;
-  //max-width: 1200px;
+  min-width: 580px;
+  max-width: 1200px;
   background-color: #FFFEFF;
   -moz-box-shadow: 0 0 15px #000;
   -webkit-box-shadow: 0 0 15px #000;
