@@ -81,12 +81,14 @@ a:hover {
   //jb: was: 580px
   min-width: 320px;
   max-width: 1200px;
-  background-color: #FFFEFF;
+  //jb: was #FFFEFF
+  background-color: #FFFFFF;
   -moz-box-shadow: 0 0 15px #000;
   -webkit-box-shadow: 0 0 15px #000;
   box-shadow: 0 0 15px #000;
 
-  overflow: hidden;
+ //jb was: hidden
+  overflow: scroll;
 
   background-image: -webkit-linear-gradient(top, #F7F6F6 0px, #F7F6F6 300px, #FFFEFF 450px, #FFFEFF 1100px, #F7F6F6 1250px, #F7F6F6 100%);
   background-image:    -moz-linear-gradient(top, #F7F6F6 0px, #F7F6F6 300px, #FFFEFF 450px, #FFFEFF 1100px, #F7F6F6 1250px, #F7F6F6 100%);
