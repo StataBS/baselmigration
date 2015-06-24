@@ -481,7 +481,8 @@ a:hover {
 
 .container {
   margin: 0 auto;
-  min-width: 580px;
+  //jb: was: 580px
+  min-width: 320px;
   max-width: 1200px;
   background-color: #FFFEFF;
   -moz-box-shadow: 0 0 15px #000;
