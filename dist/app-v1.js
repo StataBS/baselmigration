@@ -544,7 +544,9 @@ return n?ua.touches(y,n)[0]:ua.mouse(y)}function f(){ua.event.keyCode==32&&(E||(
 // Timeline: year selector
 (function(scope) {
   scope.timeline = function(diagram, config) {
-    var years = Object.keys(diagram.data.matrix).map(function(y) { return parseInt(y); }); 
+    var years = Object.keys(diagram.data.matrix).map(function(y) { return parseInt(y); });
+    //added line by JB
+    years.reverse(); 
 
     config = config || {};
     config.element = config.element || 'body';
