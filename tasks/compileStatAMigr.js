@@ -16,7 +16,6 @@ module.exports = function(grunt) {
   function compileStatAMigr(filename, options, done) {
     var data = {
       years: {
-		2006: {},
 		2007: {},
 		2008: {},
 		2009: {},
@@ -25,13 +24,14 @@ module.exports = function(grunt) {
 		2012: {},
 		2013: {},
 		2014: {},
+    2015: {},
       },
       migrations: {},
       regions: {}
     };
     var years = Object.keys(data.years);
     var headers = [];
-    
+
     // sort order
     //var sortedRegions = ['North America', 'Africa', 'Europe', 'Fmr Soviet Union', 'West Asia', 'South Asia', 'East Asia', 'South-East Asia', 'Oceania', 'Latin America'];
 	var sortedRegions = ['Basel-Stadt', 'Übrige Schweiz', 'Übriges Europa', 'A - Afrika', 'AS - Asien', 'O - Australien', 'SA - Lateinamerika', 'NA - Nordamerika', 'U - Unbekannt'];

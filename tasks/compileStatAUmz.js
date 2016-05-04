@@ -16,7 +16,6 @@ module.exports = function(grunt) {
   function compileStatAUmz(filename, options, done) {
     var data = {
       years: {
-		2006: {},
 		2007: {},
 		2008: {},
 		2009: {},
@@ -25,13 +24,14 @@ module.exports = function(grunt) {
 		2012: {},
 		2013: {},
 		2014: {},
+    2015: {},
       },
       migrations: {},
       regions: {}
     };
     var years = Object.keys(data.years);
     var headers = [];
-    
+
     // sort order
     //var sortedRegions = ['North America', 'Africa', 'Europe', 'Fmr Soviet Union', 'West Asia', 'South Asia', 'East Asia', 'South-East Asia', 'Oceania', 'Latin America'];
 	var sortedRegions = ['1 - Altstadt Grossbasel','2 - Vorstädte','3 - Am Ring','4 - Breite','5 - St. Alban','6 - Gundeldingen','7 - Bruderholz','8 - Bachletten','9 - Gotthelf','10 - Iselin','11 - St. Johann','12 - Altstadt Kleinbasel','13 - Clara','14 - Wettstein','15 - Hirzbrunnen','16 - Rosental','17 - Matthäus','18 - Klybeck','19 - Kleinhüningen','20 - Riehen','30 - Bettingen'];

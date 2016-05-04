@@ -1,7 +1,7 @@
-copy "P:\6_Werkzeugkiste\Transfer\jb\StatACountriesMigr.csv" "C:\dev\workspace\globalmigration\data\" 
-copy "P:\6_Werkzeugkiste\Transfer\jb\StatAFlowDataMigr.csv"  "C:\dev\workspace\globalmigration\data\" 
-copy "P:\6_Werkzeugkiste\Transfer\jb\StatACountriesUmz.csv"  "C:\dev\workspace\globalmigration\data\" 
-copy "P:\6_Werkzeugkiste\Transfer\jb\StatAFlowDataUmz.csv"   "C:\dev\workspace\globalmigration\data\" 
+copy "P:\6_Werkzeugkiste\Transfer\jb - jonas bieri\StatACountriesMigr.csv" "C:\dev\workspace\baselmigration\data\" 
+copy "P:\6_Werkzeugkiste\Transfer\jb - jonas bieri\StatAFlowDataMigr.csv"  "C:\dev\workspace\baselmigration\data\" 
+copy "P:\6_Werkzeugkiste\Transfer\jb - jonas bieri\StatACountriesUmz.csv"  "C:\dev\workspace\baselmigration\data\" 
+copy "P:\6_Werkzeugkiste\Transfer\jb - jonas bieri\StatAFlowDataUmz.csv"   "C:\dev\workspace\baselmigration\data\" 
 
 
 rem grunt --force
