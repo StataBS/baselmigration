@@ -13,9 +13,11 @@ module.exports = function(grunt) {
         src: ['tasks/*.js']
       }
     },
+	
     nodeunit: {
       files: ['test/**/*_test.js']
     },
+	
     filter: {
       main: {
         options: {
@@ -30,24 +32,56 @@ module.exports = function(grunt) {
         src: 'tmp/data.csv',
         dest: 'json/migrations.json'
       }
-    },
+    },	
 	
     filterStatAUmz: {
       main: {
         options: {
-          countries: 'data/StatACountriesUmz.csv'
+          countries: 'data/StatACountriesUmzAlle.csv'
         },
-        src: 'data/StatAFlowDataUmz.csv',
-        dest: 'tmp/dataStatA_Umz.csv'
+        src: 'data/StatAFlowDataUmzAlle.csv',
+        dest: 'tmp/dataStatA_UmzAlle.csv'
       }
     },
     compileStatAUmz: {
       main: {
-        src: 'tmp/dataStatA_Umz.csv',
-        dest: 'json/migrationsStatA_Umz.json'
+        src: 'tmp/dataStatA_UmzAlle.csv',
+        dest: 'json/migrationsStatA_UmzAlle.json'
       }
     },
-
+	
+    filterStatAUmzCH: {
+      main: {
+        options: {
+          countries: 'data/StatACountriesUmzSchweiz.csv'
+        },
+        src: 'data/StatAFlowDataUmzSchweiz.csv',
+        dest: 'tmp/dataStatA_UmzSchweiz.csv'
+      }
+    },
+    compileStatAUmzCH: {
+      main: {
+        src: 'tmp/dataStatA_UmzSchweiz.csv',
+        dest: 'json/migrationsStatA_UmzSchweiz.json'
+      }
+    },	
+	
+    filterStatAUmzA: {
+      main: {
+        options: {
+          countries: 'data/StatACountriesUmzAusland.csv'
+        },
+        src: 'data/StatAFlowDataUmzAusland.csv',
+        dest: 'tmp/dataStatA_UmzAusland.csv'
+      }
+    },
+    compileStatAUmzA: {
+      main: {
+        src: 'tmp/dataStatA_UmzAusland.csv',
+        dest: 'json/migrationsStatA_UmzAusland.json'
+      }
+    },	
+	
     filterStatAMigr: {
       main: {
         options: {
@@ -64,8 +98,7 @@ module.exports = function(grunt) {
       }
     },
 	
-	
-	
+		
     concat: {
       js: {
         options: {
@@ -133,6 +166,8 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', ['concat', 'cssmin', 'uglify', 'copy']);
   grunt.registerTask('default', ['jshint', 'nodeunit', 'filter', 'compile', 'build']);
-  grunt.registerTask('StatAUmz', ['jshint', 'nodeunit', 'filterStatAUmz', 'compileStatAUmz', 'build']);
   grunt.registerTask('StatAMigr', ['jshint', 'nodeunit', 'filterStatAMigr', 'compileStatAMigr', 'build']);
+  grunt.registerTask('StatAUmz', ['jshint', 'nodeunit', 'filterStatAUmz', 'compileStatAUmz', 'build']);
+  grunt.registerTask('StatAUmzCH', ['jshint', 'nodeunit', 'filterStatAUmzCH', 'compileStatAUmzCH', 'build']);
+  grunt.registerTask('StatAUmzA', ['jshint', 'nodeunit', 'filterStatAUmzA', 'compileStatAUmzA', 'build']);
 };

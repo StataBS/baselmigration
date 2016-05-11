@@ -149,4 +149,53 @@ module.exports = function(grunt) {
       });
     });
   });
+  
+  grunt.registerMultiTask('compileStatAUmzA', 'Compile csv data', function() {
+    var options = this.options();
+
+    var done = this.async();
+
+    this.files.forEach(function(file) {
+      file.src.forEach(function(src) {
+        grunt.log.write('Compiling ' + src + '...');
+
+        compileStatAUmz(src, options, function(err, data) {
+          if (err) {
+            grunt.log.error(err);
+          } else {
+            grunt.log.ok();
+            grunt.file.write(file.dest, JSON.stringify(data, null, options.sample ? 2 : 0));
+          }
+          done(!err);
+        });
+      });
+    });
+  });
+	
+  grunt.registerMultiTask('compileStatAUmzCH', 'Compile csv data', function() {
+    var options = this.options();
+
+    var done = this.async();
+
+    this.files.forEach(function(file) {
+      file.src.forEach(function(src) {
+        grunt.log.write('Compiling ' + src + '...');
+
+        compileStatAUmz(src, options, function(err, data) {
+          if (err) {
+            grunt.log.error(err);
+          } else {
+            grunt.log.ok();
+            grunt.file.write(file.dest, JSON.stringify(data, null, options.sample ? 2 : 0));
+          }
+          done(!err);
+        });
+      });
+    });
+  });
+
+	
+
+
+  
 };

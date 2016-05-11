@@ -5,8 +5,10 @@ copy "P:\6_Werkzeugkiste\Transfer\jb - jonas bieri\StatAFlowDataUmz.csv"   "C:\d
 
 
 rem grunt --force
-start grunt StatAUmz
 start grunt StatAMigr
+start grunt StatAUmz
+start grunt StatAUmzCH
+start grunt StatAUmzA
 
 rem start web server
 npm start

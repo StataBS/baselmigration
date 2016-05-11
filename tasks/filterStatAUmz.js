@@ -121,4 +121,90 @@ module.exports = function(grunt) {
       }
     });
   });
+
+  grunt.registerMultiTask('filterStatAUmzCH', 'Filter csv data', function() {
+    var options = this.options({
+      countries: grunt.option('countries'),
+      sample: grunt.option('sample')
+    });
+
+    // when sample option is set, only use countries starting with `A`
+    if (options.sample === true) {
+      options.sample = 'A';
+    }
+    if (options.sample) {
+      options.sample = new RegExp('^' + options.sample);
+    }
+
+    var done = this.async();
+    var files = this.files;
+
+    grunt.log.write('Reading countries ' + options.countries + '...');
+    countries(options.countries, function(err, codes) {
+      if (err) {
+        grunt.log.error(err);
+      } else {
+        grunt.log.ok();
+
+        files.forEach(function(file) {
+          file.src.forEach(function(src) {
+            grunt.log.write('Filtering ' + src + '...');
+
+            filterStatAUmz(src, file.dest, codes, options, function(err) {
+              if (err) {
+                grunt.log.error(err);
+              } else {
+                grunt.log.ok();
+              }
+              done(!err);
+            });
+          });
+        });
+      }
+    });
+  });  
+
+
+  grunt.registerMultiTask('filterStatAUmzA', 'Filter csv data', function() {
+    var options = this.options({
+      countries: grunt.option('countries'),
+      sample: grunt.option('sample')
+    });
+
+    // when sample option is set, only use countries starting with `A`
+    if (options.sample === true) {
+      options.sample = 'A';
+    }
+    if (options.sample) {
+      options.sample = new RegExp('^' + options.sample);
+    }
+
+    var done = this.async();
+    var files = this.files;
+
+    grunt.log.write('Reading countries ' + options.countries + '...');
+    countries(options.countries, function(err, codes) {
+      if (err) {
+        grunt.log.error(err);
+      } else {
+        grunt.log.ok();
+
+        files.forEach(function(file) {
+          file.src.forEach(function(src) {
+            grunt.log.write('Filtering ' + src + '...');
+
+            filterStatAUmz(src, file.dest, codes, options, function(err) {
+              if (err) {
+                grunt.log.error(err);
+              } else {
+                grunt.log.ok();
+              }
+              done(!err);
+            });
+          });
+        });
+      }
+    });
+  });  
+  
 };
