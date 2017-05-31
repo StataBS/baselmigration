@@ -15,8 +15,7 @@ module.exports = function(grunt) {
   // Compile csv data file into JSON matrix
   function compileStatAMigr(filename, options, done) {
     var data = {
-      years: {
-		2007: {},
+      years: {		
 		2008: {},
 		2009: {},
 		2010: {},
@@ -25,6 +24,7 @@ module.exports = function(grunt) {
 		2013: {},
 		2014: {},
     2015: {},
+    2016: {}
       },
       migrations: {},
       regions: {}
