@@ -1,4 +1,5 @@
 ﻿"iso","name","show (1 = yes 0 = no)"
+,,1
 1,Altstadt Grossbasel,1
 2,Vorstädte,1
 3,Am Ring,1
@@ -24,47 +25,37 @@ AG,AG,1
 AI,AI,1
 AR,AR,1
 Aegypten,Aegypten,1
-Aethiopien,Aethiopien,1
-Afghanistan,Afghanistan,1
-Algerien,Algerien,1
 Argentinien,Argentinien,1
 Australien,Australien,1
 AustralienNeuseeland,Australien Neuseeland,1
 BE,BE,1
 BL,BL,1
 Bolivien,Bolivien,1
+BosnienHerzegowina,Bosnien-Herzegowina,1
 Brasilien,Brasilien,1
 Chile,Chile,1
 China,China,1
-CostaRica,Costa Rica,1
 Deutschland,Deutschland,1
 DominikanischeRepubli,Dominikanische Republi,1
 Dänemark,Dänemark,1
 Ecuador,Ecuador,1
 ElSalvador,El Salvador,1
-Elfenbeinküste,Elfenbeinküste,1
-Eritrea,Eritrea,1
 FR,FR,1
 Frankreich,Frankreich,1
 GE,GE,1
 GL,GL,1
 GR,GR,1
-Gambia,Gambia,1
 Ghana,Ghana,1
+Griechenland,Griechenland,1
 Indien,Indien,1
 Indonesien,Indonesien,1
-Irak,Irak,1
-Iran,Iran,1
 Israel,Israel,1
 Italien,Italien,1
 JU,JU,1
 Japan,Japan,1
-Kamerun,Kamerun,1
 Kanada,Kanada,1
 Kenia,Kenia,1
 Kolumbien,Kolumbien,1
-KoreaNord,Korea (Nord-),1
-Kuba,Kuba,1
 LU,LU,1
 Marokko,Marokko,1
 Mexiko,Mexiko,1
@@ -72,15 +63,12 @@ NE,NE,1
 NW,NW,1
 Neuseeland,Neuseeland,1
 Niederlande,Niederlande,1
-Nigeria,Nigeria,1
 OW,OW,1
 Oesterreich,Oesterreich,1
-Panama,Panama,1
-Paraguay,Paraguay,1
+Pakistan,Pakistan,1
 Peru,Peru,1
 Philippinen,Philippinen,1
 Polen,Polen,1
-Portugal,Portugal,1
 SG,SG,1
 SH,SH,1
 SO,SO,1
@@ -89,14 +77,10 @@ Schweden,Schweden,1
 Senegal,Senegal,1
 SerbienBFS,Serbien BFS,1
 Singapur,Singapur,1
-Slowakei,Slowakei,1
 Spanien,Spanien,1
-SriLanka,Sri Lanka,1
-Syrien,Syrien,1
 Südafrika,Südafrika,1
 TG,TG,1
 TI,TI,1
-Tansania,Tansania,1
 Thailand,Thailand,1
 Tunesien,Tunesien,1
 Türkei,Türkei,1
