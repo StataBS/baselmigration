@@ -24,7 +24,8 @@ module.exports = function(grunt) {
 		2014: {},
     2015: {},
     2016: {},
-    2017: {}
+    2017: {}, 
+    2018: {}
       },
       migrations: {},
       regions: {}
