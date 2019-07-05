@@ -1,4 +1,5 @@
 ﻿"iso","name","show (1 = yes 0 = no)"
+,,1
 1,Altstadt Grossbasel,1
 2,Vorstädte,1
 3,Am Ring,1
@@ -20,6 +21,7 @@
 19,Kleinhüningen,1
 20,Riehen,1
 30,Bettingen,1
+99,keine Angabe,1
 AG,AG,1
 AI,AI,1
 AR,AR,1
@@ -111,6 +113,7 @@ VereinigtesKönigreich,Vereinigtes Königreich,1
 ZG,ZG,1
 ZH,ZH,1
 unbekannt,unbekannt,1
+unbekanntesQuartier,unbekanntes Quartier,1
 übrigesAfrika,übriges Afrika,1
 übrigesAsien,übriges Asien,1
 übrigesEuropa,übriges Europa,1

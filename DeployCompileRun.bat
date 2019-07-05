@@ -1,9 +1,9 @@
-copy "P:\6_Werkzeugkiste\Transfer\jb - jonas bieri\StatACountriesMigr.csv" "C:\dev\workspace\stata-bs\baselmigration\data\" 
-copy "P:\6_Werkzeugkiste\Transfer\jb - jonas bieri\StatAFlowDataMigr.csv"  "C:\dev\workspace\stata-bs\baselmigration\data\" 
-copy "P:\6_Werkzeugkiste\Transfer\jb - jonas bieri\StatACountriesUmzAlle.csv"  "C:\dev\workspace\stata-bs\baselmigration\data\" 
-copy "P:\6_Werkzeugkiste\Transfer\jb - jonas bieri\StatAFlowDataUmzAlle.csv"   "C:\dev\workspace\stata-bs\baselmigration\data\" 
-copy "P:\6_Werkzeugkiste\Transfer\jb - jonas bieri\StatAFlowDataUmzSchweiz.csv"   "C:\dev\workspace\stata-bs\baselmigration\data\" 
-copy "P:\6_Werkzeugkiste\Transfer\jb - jonas bieri\StatAFlowDataUmzAusland.csv"   "C:\dev\workspace\stata-bs\baselmigration\data\" 
+copy "P:\6_Werkzeugkiste\Transfer\jb - jonas bieri\StatACountriesMigr.csv" "C:\dev\baselmigration\data\" 
+copy "P:\6_Werkzeugkiste\Transfer\jb - jonas bieri\StatAFlowDataMigr.csv"  "C:\dev\baselmigration\data\" 
+copy "P:\6_Werkzeugkiste\Transfer\jb - jonas bieri\StatACountriesUmzAlle.csv"  "C:\dev\baselmigration\data\" 
+copy "P:\6_Werkzeugkiste\Transfer\jb - jonas bieri\StatAFlowDataUmzAlle.csv"   "C:\dev\baselmigration\data\" 
+copy "P:\6_Werkzeugkiste\Transfer\jb - jonas bieri\StatAFlowDataUmzSchweiz.csv"   "C:\dev\baselmigration\data\" 
+copy "P:\6_Werkzeugkiste\Transfer\jb - jonas bieri\StatAFlowDataUmzAusland.csv"   "C:\dev\baselmigration\data\" 
 
 
 rem grunt --force
